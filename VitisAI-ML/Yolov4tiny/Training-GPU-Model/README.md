@@ -1,7 +1,10 @@
 # Yolov4-tiny Tensorflow
 
-1. **Yolov4-tiny**
-We also have created Yolov4-tiny based Vitis AI resource for this Prophesee event ML application. In yolov4-tiny we have the necessary codes/scripts for training, quantization/compilation and board inference.
+1. **Yolov4-tiny GPU Training**
+Here is the training method!
+ 
+ 
+ 
  
 ## Directory hierarchy
  

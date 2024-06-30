@@ -1,7 +1,7 @@
 # Yolov4-tiny Tensorflow
 
 1. **Yolov4-tiny**
-We also have created Yolov4-tiny based Vitis AI resource for this Prophesee event ML application. In yolov4-tiny we have the necessary codes/scripts for training, quantization/compilation and board inference.
+For Yolov4 tiny board inference script please follow the "Kria-Prophesee-Event-VitisAI/Kria-Ubuntu/event-cam-ml-app-Yolov4" directory.
  
 ## Directory hierarchy
  
