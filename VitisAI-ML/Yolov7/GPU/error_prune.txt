@@ -1,0 +1,92 @@
+1)
+converted the coco.yaml to dictionary using the pyyaml module
+
+
+2)converted the test function in the prune folder  by passing the coco.yaml and the model
+
+
+Fusing layers... 
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+               Class      Images      Labels           P           R      mAP@.5  mAP@.5:.95: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/regular_prune.py", line 49, in <module>
+    origin_model_metric = eval_model(model)
+                          ^^^^^^^^^^^^^^^^^
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/regular_prune.py", line 42, in <lambda>
+    eval_model = lambda model:test(data=opt.data_config, model=model)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/test.py", line 104, in test
+    for batch_i, (img, targets, paths, shapes) in enumerate(tqdm(dataloader, desc=s)):
+  File "/home/logictronix/anaconda3/envs/myenv/lib/python3.11/site-packages/tqdm/std.py", line 1185, in __iter__
+    for obj in iterable:
+TypeError: 'NoneType' object is not iterable
+
+3)
+solved by:
+remodeled the test function,
+
+Traceback (most recent call last):
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/regular_prune.py", line 50, in <module>
+    CBL_idx, Conv_idx, prune_idx= parse_module_defs(model.module_defs)
+                                                    ^^^^^^^^^^^^^^^^^
+  File "/home/logictronix/anaconda3/envs/myenv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1614, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format)
+AttributeError: 'Model' object has no attribute 'module_defs'
+
+Solved by:
+yolov7 had module_defs as module.yaml
+
+
+4)
+created a new module_list from model
+as
+
+module_list = nn.ModuleList([layer for layer in model.model])
+
+
+5)
+Traceback (most recent call last):
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/regular_prune.py", line 62, in <module>
+    bn_weights = gather_bn_weights(module_list, prune_idx)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/utils/prune_utils.py", line 96, in gather_bn_weights
+    size_list = [module_list[idx][1].weight.data.shape[0] for idx in prune_idx]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/utils/prune_utils.py", line 96, in <listcomp>
+    size_list = [module_list[idx][1].weight.data.shape[0] for idx in prune_idx]
+                 ~~~~~~~~~~~~~~~~^^^
+TypeError: 'Conv' object is not subscriptable
+
+Solved by:
+converting the module_list[idx][1] to module_list[idx].conv
+
+6)
+RuntimeError: expand(torch.cuda.FloatTensor{[32, 3, 3, 3]}, size=[32]): the number of sizes provided (1) must be greater or equal to the number of dimensions in the tensor (4)
+
+solved by:
+taking the batch normalization weights instead of conv layer weights
+
+7)
+Traceback (most recent call last):
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/regular_prune.py", line 78, in <module>
+    percent_limit = (sorted_bn==highest_thre).nonzero().item()/len(bn_weights)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: a Tensor with 15 elements cannot be converted to Scalar
+
+solved by:
+percent_limit = (sorted_bn==highest_thre).nonzero()/len(bn_weights)
+torch.mean(percent_limit).item()
+
+8)
+Traceback (most recent call last):
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/regular_prune.py", line 212, in <module>
+    pruned_module_list = prune_model_keep_size(model, module_list, prune_idx, CBL_idx, CBLidx2mask)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/logictronix/Vitis-AI/V3_5/Vitis-AI/Anupam/yolov7/utils/prune_utils.py", line 224, in prune_model_keep_size
+    offset = conv_sum.matmul(activation.reshape(-1, 1)).reshape(-1)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (64x128 and 64x1)
+
+solved by:

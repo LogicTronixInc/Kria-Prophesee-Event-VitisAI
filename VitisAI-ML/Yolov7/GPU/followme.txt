@@ -1,0 +1,13 @@
+conda activate myenv
+
+##for training
+python train.py --workers 8 --device 0 --batch-size 8 --data data/coco.yaml --img 640 640 --cfg cfg/training/yolov7.yaml --weights ./runs/train/exp<no>/<modelname> --name yolov7 --hyp data/hyp.scratch.p5.yaml
+
+##for inference
+
+#on images
+python detect.py --weights <model inside runs/train> --conf 0.25 --img-size 640 --source inference/images/horses.jpg
+
+
+#on video
+python detect.py --weights <model inside runs/train> --conf 0.25 --img-size 640 --source video.mp4

@@ -1,0 +1,124 @@
+(vitis-ai-pytorch) vitis-ai-user@logictronix-Default-string:/workspace/Anupam/yolov7$ python quant_yolov7.py 
+
+[VAIQ_NOTE]: Loading NNDCT kernels...
+Namespace(agnostic_nms=False, augment=False, classes=None, conf_thres=0.25, device='', exist_ok=False, img_size=416, iou_thres=0.45, name='exp', no_trace=False, nosave=False, project='runs/detect', save_conf=False, save_txt=False, source='inference/images', update=False, view_img=False, weights='runs/train/yolov72/weights/best.pt')
+YOLOR 🚀 v3.5-3-g98f972d4d torch 1.12.1 CUDA:0 (NVIDIA GeForce RTX 2070 SUPER, 7973.3125MB)
+
+Fusing layers... 
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+RepConv.fuse_repvgg_block
+IDetect.fuse
+Model Summary: 417 layers, 36519234 parameters, 6194944 gradients
+-------- Start YoloV7 test 
+Warning: Exporting xmodel needs batch size to be 1 and only 1 iteration of inference, change them automatically!
+
+[VAIQ_NOTE]: OS and CPU information:
+               system --- Linux
+                 node --- logictronix-Default-string
+              release --- 5.15.0-78-generic
+              version --- #85~20.04.1-Ubuntu SMP Mon Jul 17 09:42:39 UTC 2023
+              machine --- x86_64
+            processor --- x86_64
+
+[VAIQ_NOTE]: Tools version information:
+                  GCC --- GCC 9.4.0
+               python --- 3.7.12
+              pytorch --- 1.12.1
+        vai_q_pytorch --- 3.0.0+a44284e+torch1.12.1
+
+[VAIQ_NOTE]: GPU information:
+          device name --- NVIDIA GeForce RTX 2070 SUPER
+     device available --- True
+         device count --- 1
+       current device --- 0
+
+[VAIQ_NOTE]: Quant config file is empty, use default quant configuration
+
+[VAIQ_NOTE]: Quantization test process start up...
+
+[VAIQ_NOTE]: =>Quant Module is in 'cuda'.
+
+[VAIQ_NOTE]: =>Parsing Model...
+
+[VAIQ_NOTE]: Start to trace and freeze model...
+
+[VAIQ_NOTE]: The input model Model is torch.nn.Module.
+/workspace/Anupam/yolov7/models/yolo.py:151: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if self.grid[i].shape[2:4] != x[i].shape[2:4]:
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/torch/functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484809535/work/aten/src/ATen/native/TensorShape.cpp:2894.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+[VAIQ_NOTE]: Finish tracing.
+
+[VAIQ_NOTE]: Processing ops...
+██████████████████████████████████████████████████| 390/390 [00:00<00:00, 1793.39it/s, OpInfo: name = return_0, type = Return]                 
+
+[VAIQ_WARN][QUANTIZER_TORCH_FLOAT_OP]: The quantizer recognize new op `nndct_strided_slice_inplace_copy` as a float operator by default.
+
+[VAIQ_WARN][QUANTIZER_TORCH_FLOAT_OP]: The quantizer recognize new op `nndct_stack` as a float operator by default.
+
+[VAIQ_WARN][QUANTIZER_TORCH_FLOAT_OP]: The quantizer recognize new op `aten::arange` as a float operator by default.
+
+[VAIQ_WARN][QUANTIZER_TORCH_FLOAT_OP]: The quantizer recognize new op `nndct_select` as a float operator by default.
+
+[VAIQ_WARN][QUANTIZER_TORCH_FLOAT_OP]: The quantizer recognize new op `aten::pow` as a float operator by default.
+
+[VAIQ_WARN][QUANTIZER_TORCH_FLOAT_OP]: The quantizer recognize new op `aten::meshgrid` as a float operator by default.
+
+[VAIQ_NOTE]: =>Doing weights equalization...
+
+[VAIQ_NOTE]: =>Quantizable module is generated.(quantize_result/Model.py)
+
+[VAIQ_NOTE]: =>Get module with quantization.
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/nn/modules/module_template.py:132: TracerWarning: torch.tensor results are registered as constants in the trace. You can safely ignore this warning if you use this function to create tensors out of constant variables that would be the same every time you call this function. In any other case, this might cause the trace to be incorrect.
+  output = caller(*args, **kwargs)
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/quantization/torchquantizer.py:53: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if inf.sum() > 0 or nan.sum() > 0:
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/nn/modules/fix_ops.py:68: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  tensor.storage().size() != tensor.numel()):
+/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/nn/modules/prim_ops.py:116: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not (list(self.node.out_tensors[0].shape[1:]) == list(input.size())[1:]):
+Traceback (most recent call last):
+  File "quant_yolov7.py", line 180, in <module>
+    model_name=model_name)
+  File "quant_yolov7.py", line 126, in quantization
+    quantizer.export_torch_script(verbose=False)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/apis.py", line 142, in export_torch_script
+    return self.processor.export_torch_script(output_dir, verbose)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/qproc/base.py", line 612, in export_torch_script
+    return self.export_traced_torch_script(output_dir=output_dir, verbose=verbose)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/qproc/base.py", line 583, in export_traced_torch_script
+    script_module = torch.jit.trace(model, input_args, check_trace=False)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/torch/jit/_trace.py", line 759, in trace
+    _module_class,
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/torch/jit/_trace.py", line 974, in trace_module
+    argument_names,
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/nn/modules/nndct_quant_model.py", line 40, in wrapper
+    return forward_func(self, *flatten_inputs)
+  File "quantize_result/Model.py", line 536, in forward
+    output_module_225 = self.module_225({'end': output_module_220,'dtype': None,'layout': 0,'device': torch.device('cpu'),'pin_memory': False})
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1118, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/opt/vitis_ai/conda/envs/vitis-ai-pytorch/lib/python3.7/site-packages/pytorch_nndct/nn/modules/module_template.py", line 262, in forward
+    output = caller_map[self.node.name](**args)
+RuntimeError: Overloaded torch operator invoked from Python failed to many any schema:
+aten::arange() Expected a value of type 'number' for argument 'end' but instead found type 'Tensor'.
+Position: 0
+Value: tensor(52)
+Declaration: aten::arange(Scalar end, *, int? dtype=None, int? layout=None, Device? device=None, bool? pin_memory=None) -> (Tensor)
+Cast error details: Cannot cast tensor(52) to number
+
+aten::arange() is missing value for argument 'start'. Declaration: aten::arange.start(Scalar start, Scalar end, *, int? dtype=None, int? layout=None, Device? device=None, bool? pin_memory=None) -> (Tensor)
+
+aten::arange() is missing value for argument 'start'. Declaration: aten::arange.start_step(Scalar start, Scalar end, Scalar step, *, int? dtype=None, int? layout=None, Device? device=None, bool? pin_memory=None) -> (Tensor)
+
+aten::arange() expected at most 4 argument(s) but received 5 argument(s). Declaration: aten::arange.start_out(Scalar start, Scalar end, Scalar step=1, *, Tensor(a!) out) -> (Tensor(a!))
+
+aten::arange() expected at most 2 argument(s) but received 5 argument(s). Declaration: aten::arange.out(Scalar end, *, Tensor(a!) out) -> (Tensor(a!))
