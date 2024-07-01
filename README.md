@@ -1,6 +1,16 @@
+# Acknowledgement
+This Kria-App is developed by LogicTronix in coordination with Prophesee and AMD!\
+Thanks to AMD and Prophesee Team!
+
 # Kria-Prophesee-Event-VitisAI
 This repository consists of all the resources for running Prophesee CCAM5 event camera with Vitis AI ML application in KV260.
 
+
+## Easy Running this Application
+For easy running of this application , please follow : **GettingStartedGuide- Downloading and Loading the Application Firmware in KV260.pdf** from "Kria-Prophesee-Event-VitisAI/tree/main/Documentations"!
+
+##Re-create the Application
+We a
 
 
 ## Directory hierarchy
