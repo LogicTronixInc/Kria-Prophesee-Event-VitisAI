@@ -10,10 +10,16 @@ This repository consists of all the resources for running Prophesee CCAM5 event 
 For easy running of this application , please follow :\
  **[GettingStartedGuide- Downloading and Loading the Application Firmware in KV260.pdf](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/Documentations/GettingStartedGuide-%20Downloading%20and%20Loading%20the%20Application%20Firmware%20in%20KV260.pdf)** from "Kria-Prophesee-Event-VitisAI/tree/main/Documentations"!
 
-###General Setup of Prophesee CCAM5 Event Camera with Kria KV260
-[KV260-Prophesee-CCAM5](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/images/Prophesee-Event-Cam-Kria-App.jpg)
+### General Setup of Prophesee CCAM5 Event Camera with Kria KV260
+![KV260-Prophesee-CCAM5](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/images/Prophesee-Event-Cam-Kria-App.jpg "KV260-Prophesee-CCAM5")
 
-##Re-create the Application
+### How event ML is different than RGB one?
+![Event-vs-RGB-ML](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/images/event-vs-RGB-camera_ML.png "Event-vs-RGB-ML")
+
+###Event ML - Video Demo
+- Coming here soon!
+
+## Re-create the Application
 We have provided the "Detail Design Guides" for recreating different section of this Kria-App, follow those form here - [Link](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/tree/main/Documentations#re-create-this-kria-application)\ 
 *For re-creation you need to have "AMD Vitis 2022.2 ,XRT 2022.2 and Petalinux 2022.2 (optional)" tools.*
 

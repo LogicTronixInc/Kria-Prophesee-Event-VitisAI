@@ -22,7 +22,7 @@ For re-creation you need to have "AMD Vitis 2022.2 ,XRT 2022.2 and Petalinux 202
 ## Directory hierarchy
 
 ##Camera Setup
-[KV260-Prophesee-CCAM5](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/images/Prophesee-Event-Cam-Kria-App.jpg)
+![KV260-Prophesee-CCAM5](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/images/Prophesee-Event-Cam-Kria-App.jpg "KV260-Prophesee-CCAM5")
 
 Thanks for going through this Kria-App design.
 
