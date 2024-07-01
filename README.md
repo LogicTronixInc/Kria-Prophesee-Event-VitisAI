@@ -20,9 +20,12 @@ For easy running of this application , please follow :\
 - Coming here soon!
 
 ## Re-create the Application
-We have provided the "Detail Design Guides" for recreating different section of this Kria-App, follow those form here - [Link](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/tree/main/Documentations#re-create-this-kria-application) 
+We have provided the "Detail Design Guides" for recreating different section of this Kria-App, follow those from here - [Link](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/tree/main/Documentations#re-create-this-kria-application) 
 
-**For re-creation you need to have "AMD Vitis 2022.2 ,XRT 2022.2 and Petalinux 2022.2 (optional)" tools.**
+**For re-creation you need to have following tools:**
+- AMD Vitis 2022.2 ,
+- XRT 2022.2 and 
+- Petalinux 2022.2 (optional).
 
 
 

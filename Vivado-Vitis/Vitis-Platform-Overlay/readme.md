@@ -1,14 +1,15 @@
+## Steps to Follow for Vitis Platform and DPU Overlay
 
 Download "DPUCZDX8G_VAI_v3.0" from here and extract the tar file here in this directory: 
 
 Have to update teh "dpu_conf.vh"  inside "DPUCZDX8G_VAI_v3.0/prj/Vitis". This dpu_conf has URAM enabled configuration for consuming the available URAM on Kria K26 FPGA of KV260.
-Also replace the "makefile" at your directory "DPUCZDX8G_VAI_v3.0/prj/Vitis", this makefile hs updated the "single DPU configuration". As KV260 only support single DPU of 4096 we are doing this.
+Also replace the "makefile" at your directory "DPUCZDX8G_VAI_v3.0/prj/Vitis", this makefile has updated the "single DPU configuration". As KV260 only support single DPU of 4096 we are doing this.
 and run the make script.
 
 
 Follow the build log attached here with or follow the reame.md from "DPUCZDX8G_VAI_v3.0/prj/Vitis".
 
-In the terminal, you have to do:
+### In the terminal, you have to do:
 
 1. source XRT: source /opt/xilinx/xrt/setup.sh  and Source Vitis : source ~/tools/Xilinx/2022_2/Vivado/2022.2/settings64.sh . If you dont have XRT then you can setup via github link: or can download the Ubuntu version specific one from here:
 2. Download the "Zynqmp-common" from petalinux page and do: export EDGE_COMMON_SW=/home/logictronix03/Downloads/kk/June9-2024-kv260-platform/kv260_vitis_platform/xilinx-zynqmp-common-v2022.2
