@@ -7,10 +7,10 @@ We are using Vitis AI 3.0 for Quantizing the tensorflow1 model (.pb) model.\
 
 1. **Quantization**
 Quantization script,\
-- after quantization you will get xmodel and .pb model(??).
+- after quantization you will get xmodel and .pb model.
 
 2. **Compilation**
-Compilation Script
+Compilation Script, now compile the quantized xmodel.
 
 After compilation you will receive the XMODEL.
 

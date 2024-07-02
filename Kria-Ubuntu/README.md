@@ -11,7 +11,7 @@ Other design files will be used at "detail design guide" documents. Please follo
 
 ## Directory hierarchy
 
-├── event-cam-ml-app-Yolov4 ==> Application and ML model for KR260. \
+├── event-cam-ml-app-Yolov4 ==> Application and ML model for KV260. \
 │   ├── src \
 │   └── xmodels \
 ├── Firmwares ==> Firmware file for Kria-Ubuntu OS. Have to copy inside "lib/firmware/xilinx" directory in Kria-Ubuntu. \
