@@ -1,0 +1,15 @@
+docker run \
+-e DISPLAY=unix$DISPLAY \
+-h "xlnx-docker" \
+--env="XDG_SESSION_TYPE" \
+--net=host \
+--privileged \
+--volume="/home/ubuntu/.Xauthority:/root/dot.Xauthority:rw" \
+-v /tmp:/tmp \
+-v /dev:/dev \
+-v /sys:/sys \
+-v /etc/vart.conf:/etc/vart.conf \
+-v /lib/firmware/xilinx:/lib/firmware/xilinx \
+-v /run:/run \
+-v /home/ubuntu:/ubuntu \
+-it logictronixinc/prophesee-ml-kria:0.3 bash
