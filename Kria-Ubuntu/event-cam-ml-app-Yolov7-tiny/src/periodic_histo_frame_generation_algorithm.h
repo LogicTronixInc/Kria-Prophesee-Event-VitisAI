@@ -189,7 +189,24 @@ void PeriodicHistoFrameGenerationAlgorithm::process_event_buffer(EventIt it_begi
                                     [](const auto &ev, const timestamp ts) { return ev.t < ts; });
     }
 
-    
+    // // Add events in the time surface
+
+    // // Checks time overflow. If one occurs, updates the time offset to apply and the timesurface accordingly.
+    // while (std::prev(it_end)->t > ts_offset_ + std::numeric_limits<int32_t>::max()) {
+    //     ts_offset_ += std::numeric_limits<int32_t>::max();
+    //     for (auto &pix_data : time_surface_) {
+    //         pix_data.first =
+    //             pix_data.first >= std::numeric_limits<int32_t>::min() + std::numeric_limits<int32_t>::max() ?
+    //                 pix_data.first - std::numeric_limits<int32_t>::max() :
+    //                 std::numeric_limits<int32_t>::min();
+    //     }
+    // }
+
+    // // Refresh the time-surface using the event buffer
+    // for (auto it = it_begin; it != it_end; ++it) {
+    //     const int32_t it_t                    = static_cast<int32_t>(it->t - ts_offset_);
+    //     time_surface_[it->y * width_ + it->x] = {it_t, it->p};
+    // }
     frame_unpacked_.reset();
     const auto &cfg = frame_unpacked_.get_config();
     auto &histo     = frame_unpacked_.get_data();

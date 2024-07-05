@@ -13,8 +13,8 @@ CDHistoFrameGenerator::CDHistoFrameGenerator(long width, long height, bool proce
     int nevents = -1;
 
     // we also need to choose an accumulation time and a frame rate (here of 20ms and 50 fps)
-    const std::uint32_t acc = 20000;
-    double fps              = 50;
+    const std::uint32_t acc = 50000;
+    double fps              = 20;
     Metavision::timestamp period_us = 10000, min_generation_period_us = 0;
 
     frame_generation_algo_.reset(new PeriodicHistoFrameGenerationAlgorithm(width, height, acc, fps, 

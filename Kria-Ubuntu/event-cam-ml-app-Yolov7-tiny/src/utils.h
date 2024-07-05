@@ -64,8 +64,8 @@ inline float cal_iou(vector<float> box, vector<float> truth) {
   return inter_area * 1.0 / union_area;
 }
 
-void correct_region_boxes(vector<vector<float>>& boxes, int n, int w, int h,
-                          int netw, int neth, int relative = 0) {
+void correct_region_boxes(vector<vector<float>>& boxes, int n, int w,
+                                 int h, int netw, int neth) {
   int new_w = 0;
   int new_h = 0;
 
@@ -86,67 +86,57 @@ void correct_region_boxes(vector<vector<float>>& boxes, int n, int w, int h,
   }
 }
 
-void detect(vector<vector<float>>& boxes, vector<float> result, int channel,
-            int height, int weight, int num, int sh, int sw,float scale,float conf);
+void applyNMS_new(const vector<vector<float>>& boxes,
+                     const vector<float>& scores, const float nms,
+                     const float conf, vector<size_t>& res) {
+  const size_t count = boxes.size();
+  vector<pair<float, size_t>> order;
+  for (size_t i = 0; i < count; ++i) {
+    order.push_back({scores[i], i});
+  }
+  stable_sort(order.begin(), order.end(),
+              [](const pair<float, size_t>& ls, const pair<float, size_t>& rs) {
+                return ls.first > rs.first;
+              });
+  vector<size_t> ordered;
+  transform(order.begin(), order.end(), back_inserter(ordered),
+            [](auto& km) { return km.second; });
+  vector<bool> exist_box(count, true);
 
-void detect(vector<vector<float>>& boxes, vector<float> result, int channel,
-            int height, int width, int num, int sHeight, int sWidth,float scale,float conf) {
-  //  vector<float> biases{10,13,16,30,33,23,30,61,62,45,59,119,116,90,156,198,373,326};
-  vector<float> biases{12,16, 19,36, 40,28,36,75, 76,55, 72,146,142,110, 192,243, 459,401};
-  //vector<float> biases{36,75, 76,55, 72,146,12,16, 19,36, 40,28,142,110, 192,243, 459,401};
-  //vector<float> biases{142,110, 192,243, 459,401,12,16, 19,36, 40,28,36,75, 76,55, 72,146};
-
- 
-//  vector<float> biases{13,18,19,26,28,40,43,39,53,63,83,104};
-  // vector<float> biases{41, 42, 55, 59, 84, 79, 101, 100, 155, 145, 244, 239};
-  
- int conf_box = 5 + classificationCnt;
- int index = 0;
- auto conf_desigmoid = -logf(1.0f / conf - 1.0f);
-  float* swap_data = new float[channel * height * width];
-
-  for (int h = 0; h < height; ++h) {
-    for (int w = 0; w < width; ++w) {
-      for (int c = 0; c < channel; ++c) {
-        int temp = c * height * width + h * width + w;
-        swap_data[index++] = result[c * height * width + h * width + w];
-      }
+  for (size_t _i = 0; _i < count; ++_i) {
+    size_t i = ordered[_i];
+    if (!exist_box[i]) continue;
+    if (scores[i] < conf) {
+      exist_box[i] = false;
+      continue;
+    }
+    /* add a box as result */
+    res.push_back(i);
+    // cout << "nms push "<< i<<endl;
+    for (size_t _j = _i + 1; _j < count; ++_j) {
+      size_t j = ordered[_j];
+      if (!exist_box[j]) continue;
+      float ovr = 0.0;
+      ovr = cal_iou(boxes[j], boxes[i]);
+      if (ovr >= nms) exist_box[j] = false;
     }
   }
-  for (int h = 0; h < height; ++h) {
-    for (int w = 0; w < width; ++w) {
-      for (int c = 0; c < anchorCnt; ++c) {
-        //float obj_score = sigmoid(swap[h * width + w][c][4]);
-	int idx = ((h * width + w) * anchorCnt + c) * conf_box;
-	if (swap_data[idx + 4] * scale < conf_desigmoid) continue;
-        vector<float> box;        
-	//if (obj_score < CONF) continue;
-        //vector<float> box;
- 	     float obj_score = sigmoid(swap_data[idx + 4] * scale);
-
-        box.push_back((w + sigmoid(swap_data[idx] * scale)) / width);
-        box.push_back((h + sigmoid(swap_data[idx + 1] * scale)) / height);
-        box.push_back(exp(swap_data[idx + 2] * scale) *
-                      biases[2 * c + 2 * anchorCnt * num] / float(sWidth));
-        box.push_back(exp(swap_data[idx + 3] * scale) *
-                      biases[2 * c + 2 *anchorCnt * num + 1] /
-                      float(sHeight));
-        box.push_back(-1);
-        box.push_back(obj_score);
-        for (int p = 0; p < classificationCnt; p++) {
-          box.push_back(obj_score * sigmoid(swap_data[idx + 5 + p] * scale));
-        }
-        boxes.push_back(box);
-      }
-    }
-  }
- delete[] swap_data;
 }
 
+static void letterbox(const cv::Mat& im, const cv::Mat& om, const int w,
+                      const int h) {
+  float scale = min((float)w / (float)im.cols, (float)h / (float)im.rows);
+  int new_w = im.cols * scale;
+  int new_h = im.rows * scale;
+  cv::Mat img_res;
+  cv::resize(im, img_res, cv::Size(new_w, new_h), 0, 0, cv::INTER_LINEAR);
 
-
-
-
+  int x = (w - new_w) / 2;
+  int y = (h - new_h) / 2;
+  auto rect = cv::Rect{x, y, new_w, new_h};
+  img_res.copyTo(om(rect));
+  return;
+}
 
 vector<vector<float>> applyNMS(vector<vector<float>>& boxes, int classes,
                                const float thres,float conf) {
@@ -353,3 +343,58 @@ image letterbox_image(image im, int w, int h) {
 
   return boxed;
 }
+
+void detect_new(vector<vector<float>>& boxes, int8_t* det_out, int channel,
+            int height, int width, int num, int sHeight, int sWidth,float det_scale,float conf) {
+// int8_t* det_out = (int8_t*)outTensorList[num].get_data(0);
+  // int8_t* det_out = result;
+  vector<float> biases{10,13,16,30,33,23,30,61,62,45,59,119,116,90,156,198,373,326};
+  // vector<float> biases{10,13,16,30,33,23,116,90,156,198,373,326,30,61,62,45,59,119};
+    // vector<float> biases{116,90,156,198,373,326,30,61,62,45,59,119,10,13,16,30,33,23};
+  // float det_scale = scale;
+  // int index = 0;
+  int8_t conf_thresh_inverse =
+          -std::log(1.0f / conf - 1) / det_scale;
+
+  // for (int h = 0; h < height; ++h) {
+  //   for (int w = 0; w < width; ++w) {
+  //     for (int c = 0; c < channel; ++c) {
+  //       int temp = c * height * width + h * width + w;
+  //       det_out[index++] = result[c * height * width + h * width + w];
+  //     }
+  //   }
+  // }
+
+
+      for (int h = 0; h < height; ++h) {
+        for (int w = 0; w < width; ++w) {
+          for (auto cnt = 0; cnt < anchorCnt; cnt++) {
+
+            int idx = channel * (h * width + w) + cnt * (classificationCnt+5);
+            if (det_out[idx + 4] > conf_thresh_inverse) {
+              vector<float> box;
+              float obj_score = sigmoid(det_out[idx + 4] * det_scale);
+              box.push_back((sigmoid(det_out[idx] * det_scale) * 2 - 0.5 + w) /
+                            width);
+              box.push_back(
+                  (sigmoid(det_out[idx + 1] * det_scale) * 2 - 0.5 + h) /
+                  height);
+              box.push_back(pow(sigmoid(det_out[idx + 2] * det_scale) * 2, 2) *
+                            biases[2 * cnt + 2 * anchorCnt * num] /
+                            (float)(sWidth));
+              box.push_back(pow(sigmoid(det_out[idx + 3] * det_scale) * 2, 2) *
+                            biases[2 * cnt + 2 * anchorCnt * num + 1] /
+                            (float)(sHeight));
+              box.push_back(-1);
+              box.push_back(obj_score);
+              for (int p = 0; p < classificationCnt; p++) {
+                box.push_back(obj_score *
+                              sigmoid(det_out[idx + 5 + p] * det_scale));
+              }
+              boxes.push_back(box);
+            }
+          }
+        }
+      }
+
+            }

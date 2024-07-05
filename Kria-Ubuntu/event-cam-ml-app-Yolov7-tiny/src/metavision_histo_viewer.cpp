@@ -85,7 +85,8 @@ float map_to_0_1_with_step_size(float original_value)
     // # Calculate which segment the original_value falls into
     float segment_width = 0.8 ;
     // # This is the width of each segment in the input range
-     int segment_index = int(original_value / segment_width);
+   // int segment_index = int(original_value) ;
+    int segment_index = int(original_value / segment_width);
     // # Determine the segment index
     if (segment_index > 5)
         return 1;
@@ -188,10 +189,14 @@ void displayFrame() {
  *
  * @return none
  */
+// 
+
+
+
 void postProcess(vart::Runner* runner, Mat& frame, vector<int8_t*> results,
                  int sWidth, int sHeight, const float* output_scale,float conf) {
-  const string classes[2] = {"person","car"};
-  
+  const string classes[2] = {"person","Vehicle"};
+
   vector<vector<float>> boxes;
   // auto  outputTensors = runner->get_output_tensors();
   for (int ii = 0; ii < 3; ii++) {
@@ -203,21 +208,29 @@ void postProcess(vart::Runner* runner, Mat& frame, vector<int8_t*> results,
     boxes.reserve(sizeOut);
 
     /* Store every output node results */
-    std::cout<<"before get output"<<std::endl;
-    std::cout<<"output scale"<<output_scale[ii]<<std::endl;
-    get_output(results[ii], sizeOut, channel, height, width, output_scale[ii],
-               result);
    
-    detect(boxes, result, channel, height, width, ii, sHeight, sWidth,output_scale[ii],conf);
+    detect_new(boxes, results[ii], channel, height, width, ii, sHeight, sWidth,output_scale[ii],conf);
   }
 
   /* Restore the correct coordinate frame of the original image */
-  correct_region_boxes(boxes, boxes.size(), frame.cols, frame.rows, sWidth,
+  
+  correct_region_boxes(boxes, boxes.size(),320,320, sWidth,
                        sHeight);
 
-  /* Apply the computation for NMS */
-  vector<vector<float>> res = applyNMS(boxes, classificationCnt, NMS_THRESHOLD,conf);
+  /* Apply the computation for NMS */  
 
+vector<vector<float>> res;
+  vector<float> scores(boxes.size());
+  for (int k = 0; k < classificationCnt; k++) {
+    transform(boxes.begin(), boxes.end(), scores.begin(), [k](auto& box) {
+      box[4] = k;
+      return box[6 + k];
+    });
+    vector<size_t> result_k;
+    applyNMS_new(boxes, scores, NMS_THRESHOLD, conf, result_k);
+    transform(result_k.begin(), result_k.end(), back_inserter(res),
+              [&boxes](auto& k) { return boxes[k]; });
+  }
   float h = frame.rows;
   float w = frame.cols;
   for (size_t i = 0; i < res.size(); ++i) {
@@ -238,39 +251,52 @@ void postProcess(vart::Runner* runner, Mat& frame, vector<int8_t*> results,
 	
       } else if (type == 1) {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
-                  Scalar(0, 0, 255), 1, 1, 0);
+                  Scalar(0, 0, 255), 1, 1, 0);	
+
      } else if (type == 2) {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
                   Scalar(255,0,0), 1, 1, 0);	
+
    } else if (type == 3) {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
                   Scalar( 0, 0,255), 1, 1, 0);
-    } else if (type == 4) {
+      } 
+ else if (type == 4) {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
                   Scalar(255, 0,0), 1, 1, 0);
-    } else if (type == 5) {
+	
+      } 
+
+ else if (type == 5) {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
                   Scalar( 0,0, 255), 1, 1, 0);
-    } else if (type == 6) {
+
+      } 
+
+ else if (type == 6) {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
                   Scalar(255, 0, 0), 1, 1, 0);
-    } else if (type == 7) {
+
+      } 
+
+
+ else if (type == 7) {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
                   Scalar(0, 0, 255), 1, 1, 0);
-    } else {
+
+      } 
+
+else {
         rectangle(frame, Point(xmin, ymin), Point(xmax, ymax),
-                  Scalar(255, 200, 20), 1, 1, 0);
-                  }
+                  Scalar(255, 200, 20), 1, 1, 0);	
+
+      }       
+
     }
   }
 }
-/**
- * @brief Thread entry for running YOLO-v3 network on DPU for acceleration
- *
- * @param task - pointer to DPU task for running YOLO-v3
- *
- * @return none
- */
+
+
 void runYOLO(vart::Runner* runner,float conf,float rmax, float bmax,Mat& img) {
   /* mean values for YOLO-v3 */
   float mean[3] = {0.0001566 , 0.00001234 , 0.0};
@@ -286,9 +312,6 @@ void runYOLO(vart::Runner* runner,float conf,float rmax, float bmax,Mat& img) {
     output_scale.push_back(get_output_scale(
         runner->get_output_tensors()[shapes.output_mapping[i]]));
   }
- 
-
-
   int8_t* data = new int8_t[shapes.inTensorList[0].size *
                             inputTensors[0]->get_shape().at(0)];
   int8_t* result0 =
@@ -305,21 +328,24 @@ void runYOLO(vart::Runner* runner,float conf,float rmax, float bmax,Mat& img) {
   result.push_back(result0);
   result.push_back(result1);
   result.push_back(result2);
- 
+ // result.push_back(result3);
   std::vector<std::unique_ptr<vart::TensorBuffer>> inputs, outputs;
   std::vector<vart::TensorBuffer*> inputsPtr, outputsPtr;
+ 
     Mat resized_down,combinedImage;
     cv::Mat image2ch(height, width, CV_8UC3);
     cv::Mat temp_image2ch(height, width, CV_8UC3);
 
-    
+  
     Mat image2 = cv::Mat(height, width, CV_8SC3);
-    Mat image3 = cv::Mat(height, width, CV_8SC3);
+    Mat image3 = cv::Mat(height, width, CV_8SC3);   
+ 
     resize(img, image2, Size(width, height), 0, 0, INTER_LINEAR);
     // int k = 0;
     for (int h = 0; h < height; h++) {
       for (int w = 0; w < width; w++) {
-        for (int c = 0; c < 1; c++) {  
+        for (int c = 0; c < 1; c++) {         
+           
          image3.at<Vec3b>(h, w)[c] = map_to_0_1_with_step_size(image2.at<Vec3b>(h, w)[c]/17.0);
         }
 
@@ -328,7 +354,7 @@ void runYOLO(vart::Runner* runner,float conf,float rmax, float bmax,Mat& img) {
     for (int h = 0; h < height; h++) {
       for (int w = 0; w < width; w++) {
         for (int c = 2; c < 3; c++) {
-            image3.at<Vec3b>(h, w)[c-1] =  map_to_0_1_with_step_size(image2.at<Vec3b>(h, w)[c]/17.0);
+         image3.at<Vec3b>(h, w)[c-1] =  map_to_0_1_with_step_size(image2.at<Vec3b>(h, w)[c]/17.0);
         }
 
       }
@@ -347,7 +373,6 @@ void runYOLO(vart::Runner* runner,float conf,float rmax, float bmax,Mat& img) {
       }
 
     }
-    // input/output tensorbuffer prepare
     inputs.push_back(
         std::make_unique<CpuFlatTensorBuffer>(data, inputTensors[0].get()));
 
@@ -366,13 +391,15 @@ void runYOLO(vart::Runner* runner,float conf,float rmax, float bmax,Mat& img) {
 
     auto job_id = runner->execute_async(inputsPtr, outputsPtr);
     runner->wait(job_id.first, -1);
-   
+  
     postProcess(runner, img, result, width, height,
                 output_scale.data(),conf);
 
   
-    imshow("img1",img);
+  imshow("img1",img);
     waitKey(5); 
+
+
 
 
 }
@@ -469,9 +496,6 @@ void receiveMouseEvent(int event, int x, int y, int flags, void *userdata) {
         break;
     }
 }
-
-
-
 
 namespace {
 std::atomic<bool> signal_caught{false};
@@ -672,7 +696,8 @@ int main(int argc, char *argv[]) {
         getTensorShape(runner.get(), &shapes, inputCnt, outputCnt);
         //***********ML init end*************************//
 
-
+	char file_name[100];
+        int frame_count=0;
 
         // Get the geometry of the camera
         const auto &geometry = camera.geometry();
@@ -689,13 +714,13 @@ int main(int argc, char *argv[]) {
         // Setup CD frame generator
         std::mutex cd_frame_generator_mutex;
         Metavision::CDHistoFrameGenerator cd_frame_generator(geometry.width(), geometry.height());
-        cd_frame_generator.set_display_accumulation_time_us(10000);
+        cd_frame_generator.set_display_accumulation_time_us(50000);
 
         std::mutex cd_frame_mutex;
         cv::Mat cd_frame;
         Metavision::timestamp cd_frame_ts{0};
         cd_frame_generator.start(
-            30, [&cd_frame_mutex, &cd_frame, &cd_frame_ts](const Metavision::timestamp &ts, const cv::Mat &frame) {
+            20, [&cd_frame_mutex, &cd_frame, &cd_frame_ts](const Metavision::timestamp &ts, const cv::Mat &frame) {
                 std::unique_lock<std::mutex> lock(cd_frame_mutex);
                 cd_frame_ts = ts;
                 frame.copyTo(cd_frame);
@@ -713,18 +738,6 @@ int main(int argc, char *argv[]) {
         } else {
             roi_ctrl.need_refresh = false;
         }
-
-        // Setup CD frame display
-        std::string cd_window_name("CD Events");
-        cv::namedWindow(cd_window_name, CV_GUI_EXPANDED);
-        cv::resizeWindow(cd_window_name, geometry.width(), geometry.height());
-        cv::moveWindow(cd_window_name, 0, 0);
-#if (CV_MAJOR_VERSION == 3 && (CV_MINOR_VERSION * 100 + CV_SUBMINOR_VERSION) >= 408) || \
-    (CV_MAJOR_VERSION == 4 && (CV_MINOR_VERSION * 100 + CV_SUBMINOR_VERSION) >= 102)
-        cv::setWindowProperty(cd_window_name, cv::WND_PROP_TOPMOST, 1);
-#endif
-        cv::setMouseCallback(cd_window_name, receiveMouseEvent, &roi_ctrl);
-
         // Setup camera CD callback to update the frame generator and event rate estimator
         int cd_events_cb_id =
             camera.cd().add_callback([&cd_frame_generator_mutex, &cd_frame_generator, &cd_rate_estimator](
@@ -781,9 +794,11 @@ int main(int argc, char *argv[]) {
                         cv::putText(cd_frame, text, cv::Point(10, 20), cv::FONT_HERSHEY_PLAIN, 1,
                                     cv::Scalar(108, 143, 255), 1, cv::LINE_AA);
                     }
-                    cv::imshow(cd_window_name, cd_frame);//passing frame to ML
                     
                     runYOLO(runner.get(),conf,rmax,bmax,cd_frame);
+		            //sprintf(file_name, "histo_frame_combined%d.jpg", frame_count+1);
+                    //cv::imwrite(file_name, cd_frame);
+                    //frame_count++;
 
                 }
             }
