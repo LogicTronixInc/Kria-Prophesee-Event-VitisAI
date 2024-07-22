@@ -357,8 +357,7 @@ void runYOLO(vart::Runner* runner,float conf,float rmax, float bmax,Mat& img) {
       for (int w = 0; w < width; w++) {
         for (int c = 0;c<2 ;c++)
         {
-        //  image3.at<Vec3b>(h, w)[0] = map_to_0_1_with_step_size((image2.at<Vec3b>(h, w)[0]/17.0));
-        //  image3.at<Vec3b>(h, w)[1] =  map_to_0_1_with_step_size((image2.at<Vec3b>(h, w)[1]/17.0));
+       
           data[l] =(int8_t)((map_to_0_1_with_step_size((image2.at<Vec3b>(h, w)[c]/17.0))/255.0) * input_scale);
                   l++;
         }

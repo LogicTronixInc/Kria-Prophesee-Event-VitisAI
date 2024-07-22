@@ -1,24 +1,11 @@
 # Kria-Ubuntu Application Running and Development Steps
 
-1. **Runnign the Application**
-For running the application please follow the "Getting Started Guide" from "/Documentations" directory.
+1. **Running the Application**\
+For running the application please follow the "[GettingStartedGuide- Downloading and Loading the Application Firmware in KV260.pdf](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/Documentations/GettingStartedGuide-%20Downloading%20and%20Loading%20the%20Application%20Firmware%20in%20KV260.pdf)".
 
 
-2. **Other Design Files**
-Other design files will be used at "detail design guide" documents. Please follow those detail design documents!
-
-
-
-## Directory hierarchy
-
-├── event-cam-ml-app-Yolov4 ==> Application and ML model for KV260. \
-│   ├── src \
-│   └── xmodels \
-├── Firmwares ==> Firmware file for Kria-Ubuntu OS. Have to copy inside "lib/firmware/xilinx" directory in Kria-Ubuntu. \
-│   └── psee-vitis-mipi-dpu \
-├── Prophesee-device-drivers ==> Pre-compiled prophesee drivers. Please follow "getting started guide for how to use it". \
-│   └── compiled_kernel_modules \
-└── scripts ==> Setup scripts \
+2. **Other Design Files**\
+Other design files will be used at "Detail Design Guide". Please follow those detail design documents available at **Documentations folder**.
 
 
 Thanks for going through this Kria-App design.
