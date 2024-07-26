@@ -4,7 +4,6 @@ docker run \
 --env="XDG_SESSION_TYPE" \
 --net=host \
 --privileged \
---volume="/home/ubuntu/.Xauthority:/root/dot.Xauthority:rw" \
 -v /tmp:/tmp \
 -v /dev:/dev \
 -v /sys:/sys \
