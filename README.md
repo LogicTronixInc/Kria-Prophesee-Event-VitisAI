@@ -17,7 +17,7 @@ For easy running of this application , please follow :\
 ![Event-vs-RGB-ML](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/images/event-vs-RGB-camera_ML.png "Event-vs-RGB-ML")
 
 ### Event ML - Video Demo
-[![Kria Prophesee App](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/tree/main/images/thumbnail_kria_psee_app.png)](https://youtu.be/qAaae-wooaA?si=Z--ox98mg_W4XOif)
+[![Kria Prophesee App](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/blob/main/images/thumbnail_kria_psee_app.png)](https://youtu.be/qAaae-wooaA?si=Z--ox98mg_W4XOif)
 
 ## Re-create the Application
 We have provided the "Detail Design Guides" for recreating different section of this Kria-App, follow those from here - [Link](https://github.com/LogicTronixInc/Kria-Prophesee-Event-VitisAI/tree/main/Documentations#re-create-this-kria-application) 
