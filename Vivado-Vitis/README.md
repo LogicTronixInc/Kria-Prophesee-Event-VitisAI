@@ -1,5 +1,7 @@
 # VIVADO and Vitis Platform
 
+**These VIVADO and Vitis Platform creation uses Prophesee IP Cores. These IP cores has been shared by Prophesee with Apache 2.0 License.**
+
 1. **Vitis Platform and Overlay**
 This directory consists of Vitis flow design resources as Vitis Hardware Platform, Platform file (usable platform), DPU and Accelerator Overlay files.\
 The readily available this Kria-Ubuntu application uses the Vitis-flow of DPU+MIPI design files.
