@@ -22,7 +22,7 @@ While following VIVADO DPU TRD we need to use the DPU driver patch and enablemen
 │   ├── DPU-Overlay \
 │   ├── Vitis-Platform \
 │   └── Vivado-hardware-platform \
-└── VIVADO-DPU-TRD \
+└── VIVADO-DPU-TRD 
 
 Thanks for going through this Kria-App design.
 
