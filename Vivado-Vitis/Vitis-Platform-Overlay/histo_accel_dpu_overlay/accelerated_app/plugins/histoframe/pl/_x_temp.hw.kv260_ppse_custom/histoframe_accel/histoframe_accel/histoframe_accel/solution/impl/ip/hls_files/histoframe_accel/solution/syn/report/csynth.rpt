@@ -1,0 +1,381 @@
+
+
+================================================================
+== Synthesis Summary Report of 'histoframe_accel'
+================================================================
++ General Information: 
+    * Date:           Fri Sep  6 14:01:34 2024
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        histoframe_accel
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+---------+----------+------+---------+------------+-------------+-----+
+    |                             Modules                             |  Issue |       | Latency |  Latency  | Iteration|         |   Trip  |          |      |         |            |             |     |
+    |                             & Loops                             |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval|  Count  | Pipelined| BRAM |   DSP   |     FF     |     LUT     | URAM|
+    +-----------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+---------+----------+------+---------+------------+-------------+-----+
+    |+ histoframe_accel*                                              |  Timing|  -0.41|        -|          -|         -|        -|        -|  dataflow|     -|  9 (~0%)|   7073 (3%)|  13536 (11%)|    -|
+    | + entry_proc5                                                   |       -|   1.21|        0|      0.000|         -|        0|        -|        no|     -|        -|     2 (~0%)|     20 (~0%)|    -|
+    | + Block_entry1_proc                                             |       -|   2.43|        0|      0.000|         -|        0|        -|        no|     -|        -|   130 (~0%)|     47 (~0%)|    -|
+    | + Array2xfMat_128_0_720_2560_1_s                                |  Timing|  -0.00|  1843279|  6.144e+06|         -|  1843279|        -|        no|     -|  4 (~0%)|  2000 (~0%)|    5273 (4%)|    -|
+    |  + Axi2Mat*                                                     |  Timing|  -0.00|  1843277|  6.144e+06|         -|  1843208|        -|  dataflow|     -|  4 (~0%)|  1992 (~0%)|    5184 (4%)|    -|
+    |   + addrbound_1                                                 |       -|   1.21|        4|     13.332|         -|        4|        -|        no|     -|  1 (~0%)|    43 (~0%)|    110 (~0%)|    -|
+    |   + Axi2Mat_Block_entry35_proc                                  |       -|   1.21|        0|      0.000|         -|        0|        -|        no|     -|        -|    20 (~0%)|     20 (~0%)|    -|
+    |   + Axi2AxiStream                                               |  Timing|  -0.00|   115275|  3.842e+05|         -|   115275|        -|        no|     -|        -|   287 (~0%)|    648 (~0%)|    -|
+    |    + Axi2AxiStream_Pipeline_MMIterInLoop1                       |  Timing|  -0.00|   115203|  3.840e+05|         -|   115203|        -|        no|     -|        -|   152 (~0%)|     98 (~0%)|    -|
+    |     o MMIterInLoop1                                             |       -|   2.43|   115201|  3.840e+05|         3|        1|   115200|       yes|     -|        -|           -|            -|    -|
+    |   + AxiStream2Mat*                                              |  Timing|  -0.00|  1843208|  6.143e+06|         -|  1843208|        -|  dataflow|     -|  3 (~0%)|  1145 (~0%)|    4041 (3%)|    -|
+    |    + entry_proc3                                                |  Timing|  -0.00|        0|      0.000|         -|        0|        -|        no|     -|        -|     2 (~0%)|     47 (~0%)|    -|
+    |    + last_blk_pxl_width_1                                       |       -|   1.21|        0|      0.000|         -|        0|        -|        no|     -|        -|     3 (~0%)|     20 (~0%)|    -|
+    |    + AxiStream2MatStream_2_s                                    |       -|   0.06|  1843207|  6.143e+06|         -|  1843207|        -|        no|     -|  3 (~0%)|   841 (~0%)|    3743 (3%)|    -|
+    |     + AxiStream2MatStream_2_Pipeline_MMIterInLoopRow            |       -|   0.07|  1843204|  6.143e+06|         -|  1843204|        -|        no|     -|        -|   517 (~0%)|    3539 (3%)|    -|
+    |      o MMIterInLoopRow                                          |       -|   2.43|  1843202|  6.143e+06|         4|        1|  1843200|       yes|     -|        -|           -|            -|    -|
+    | + histoframe_0_9_720_2560_720_1280_1_2_2_s                      |  Timing|  -0.41|        -|          -|         -|        -|        -|        no|     -|  3 (~0%)|   426 (~0%)|    429 (~0%)|    -|
+    |  + histoframe_Pipeline_VITIS_LOOP_26_1_VITIS_LOOP_28_2          |  Timing|  -0.41|        -|          -|         -|        -|        -|        no|     -|        -|   127 (~0%)|    307 (~0%)|    -|
+    |   o VITIS_LOOP_26_1_VITIS_LOOP_28_2                             |       -|   2.43|        -|          -|         3|        1|        -|       yes|     -|        -|           -|            -|    -|
+    | + xfMat2Array_128_9_720_1280_1_1_s                              |  Timing|  -0.00|   921612|  3.072e+06|         -|   921612|        -|        no|     -|  2 (~0%)|  1664 (~0%)|    3552 (3%)|    -|
+    |  + Mat2Axi*                                                     |  Timing|  -0.00|   921610|  3.072e+06|         -|   921610|        -|  dataflow|     -|  2 (~0%)|  1577 (~0%)|    3472 (2%)|    -|
+    |   + addrbound                                                   |       -|   0.68|        4|     13.332|         -|        4|        -|        no|     -|  1 (~0%)|    44 (~0%)|    103 (~0%)|    -|
+    |   + Mat2AxiStream*                                              |       -|   0.03|   921610|  3.072e+06|         -|   921610|        -|  dataflow|     -|  1 (~0%)|   824 (~0%)|    2346 (2%)|    -|
+    |    + entry_proc                                                 |       -|   1.21|        0|      0.000|         -|        0|        -|        no|     -|        -|     2 (~0%)|     29 (~0%)|    -|
+    |    + last_blk_pxl_width                                         |       -|   1.21|        0|      0.000|         -|        0|        -|        no|     -|        -|     3 (~0%)|     20 (~0%)|    -|
+    |    + MatStream2AxiStream_2_s                                    |       -|   0.03|   921609|  3.072e+06|         -|   921609|        -|        no|     -|  1 (~0%)|   520 (~0%)|    2066 (1%)|    -|
+    |     + MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol  |       -|   0.03|   921604|  3.072e+06|         -|   921604|        -|        no|     -|        -|   396 (~0%)|    1907 (1%)|    -|
+    |      o MMIterOutRow_MMIterOutCol                                |       -|   2.43|   921602|  3.072e+06|         4|        1|   921600|       yes|     -|        -|           -|            -|    -|
+    |   + entry_proc4                                                 |       -|   1.21|        0|      0.000|         -|        0|        -|        no|     -|        -|     2 (~0%)|     20 (~0%)|    -|
+    |   + Mat2Axi_Block_entry24_proc                                  |       -|   1.21|        0|      0.000|         -|        0|        -|        no|     -|        -|    21 (~0%)|     20 (~0%)|    -|
+    |   + AxiStream2Axi                                               |  Timing|  -0.00|   172874|  5.762e+05|         -|   172874|        -|        no|     -|        -|   287 (~0%)|    672 (~0%)|    -|
+    |    + AxiStream2Axi_Pipeline_MMIterOutLoop2                      |  Timing|  -0.00|   172803|  5.760e+05|         -|   172803|        -|        no|     -|        -|   153 (~0%)|    102 (~0%)|    -|
+    |     o MMIterOutLoop2                                            |       -|   2.43|   172801|  5.759e+05|         3|        1|   172800|       yes|     -|        -|           -|            -|    -|
+    +-----------------------------------------------------------------+--------+-------+---------+-----------+----------+---------+---------+----------+------+---------+------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem1 | 128 -> 128 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem2 | 128 -> 128 | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+-----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | dat_inp_1 | 0x10   | 32    | W      | Data signal of dat_inp           |                                                                                    |
+| s_axi_control | dat_inp_2 | 0x14   | 32    | W      | Data signal of dat_inp           |                                                                                    |
+| s_axi_control | dat_out_1 | 0x1c   | 32    | W      | Data signal of dat_out           |                                                                                    |
+| s_axi_control | dat_out_2 | 0x20   | 32    | W      | Data signal of dat_out           |                                                                                    |
+| s_axi_control | rows_in   | 0x28   | 32    | W      | Data signal of rows_in           |                                                                                    |
+| s_axi_control | cols_in   | 0x30   | 32    | W      | Data signal of cols_in           |                                                                                    |
+| s_axi_control | rows_out  | 0x38   | 32    | W      | Data signal of rows_out          |                                                                                    |
+| s_axi_control | cols_out  | 0x40   | 32    | W      | Data signal of cols_out          |                                                                                    |
++---------------+-----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| dat_inp  | in        | ap_uint<128>* |
+| dat_out  | out       | ap_uint<128>* |
+| rows_in  | in        | int           |
+| cols_in  | in        | int           |
+| rows_out | in        | int           |
+| cols_out | in        | int           |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                             |
++----------+---------------+-----------+----------+-------------------------------------+
+| dat_inp  | m_axi_gmem1   | interface |          |                                     |
+| dat_inp  | s_axi_control | register  | offset   | name=dat_inp_1 offset=0x10 range=32 |
+| dat_inp  | s_axi_control | register  | offset   | name=dat_inp_2 offset=0x14 range=32 |
+| dat_out  | m_axi_gmem2   | interface |          |                                     |
+| dat_out  | s_axi_control | register  | offset   | name=dat_out_1 offset=0x1c range=32 |
+| dat_out  | s_axi_control | register  | offset   | name=dat_out_2 offset=0x20 range=32 |
+| rows_in  | s_axi_control | register  |          | name=rows_in offset=0x28 range=32   |
+| cols_in  | s_axi_control | register  |          | name=cols_in offset=0x30 range=32   |
+| rows_out | s_axi_control | register  |          | name=rows_out offset=0x38 range=32  |
+| cols_out | s_axi_control | register  |          | name=cols_out offset=0x40 range=32  |
++----------+---------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+----------------+-----------+----------+-------+-------------------------------------------------------------------------------------------------------------------+
+| HW Interface | Loop           | Direction | Length   | Width | Location                                                                                                          |
++--------------+----------------+-----------+----------+-------+-------------------------------------------------------------------------------------------------------------------+
+| m_axi_gmem1  | MMIterInLoop1  | read      | variable | 128   | /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:964:9  |
+| m_axi_gmem2  | MMIterOutLoop2 | write     | variable | 128   | /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1332:9 |
++--------------+----------------+-----------+----------+-------+-------------------------------------------------------------------------------------------------------------------+
+
+* Inferred Bursts and Widening Missed
++--------------+----------+----------------+------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Loop           | Problem                                        | Resolution | Location                                                                                                          |
++--------------+----------+----------------+------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+| m_axi_gmem2  | dout     | MMIterOutLoop2 | Sequential access length is not divisible by 2 | 214-234    | /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1332:9 |
+| m_axi_gmem1  | din      | MMIterInLoop1  | Sequential access length is not divisible by 2 | 214-234    | /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:964:9  |
++--------------+----------+----------------+------------------------------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------------------+-----+--------+-------------------------+------+--------+---------+
+| Name                                                            | DSP | Pragma | Variable                | Op   | Impl   | Latency |
++-----------------------------------------------------------------+-----+--------+-------------------------+------+--------+---------+
+| + histoframe_accel                                              | 9   |        |                         |      |        |         |
+|   out_mat_rows_channel_U                                        | -   |        | out_mat_rows_channel    | fifo | srl    | 0       |
+|   out_mat_cols_channel_U                                        | -   |        | out_mat_cols_channel    | fifo | srl    | 0       |
+|   in_mat_rows_c9_channel_U                                      | -   |        | in_mat_rows_c9_channel  | fifo | srl    | 0       |
+|   in_mat_cols_c10_channel_U                                     | -   |        | in_mat_cols_c10_channel | fifo | srl    | 0       |
+|  + Array2xfMat_128_0_720_2560_1_s                               | 4   |        |                         |      |        |         |
+|   + Axi2Mat                                                     | 4   |        |                         |      |        |         |
+|     p_channel_U                                                 | -   |        | p_channel               | fifo | srl    | 0       |
+|     axibound_V_U                                                | -   |        | axibound_V              | fifo | srl    | 0       |
+|    + addrbound_1                                                | 1   |        |                         |      |        |         |
+|      mul_mul_16ns_16ns_22_4_1_U7                                | 1   |        | mul_ln1494              | mul  | dsp48  | 3       |
+|      add_ln541_fu_102_p2                                        | -   |        | add_ln541               | add  | fabric | 0       |
+|    + Axi2AxiStream                                              | 0   |        |                         |      |        |         |
+|     + Axi2AxiStream_Pipeline_MMIterInLoop1                      | 0   |        |                         |      |        |         |
+|       add_ln840_fu_104_p2                                       | -   |        | add_ln840               | add  | fabric | 0       |
+|    + AxiStream2Mat                                              | 3   |        |                         |      |        |         |
+|      last_blk_width_channel_U                                   | -   |        | last_blk_width_channel  | fifo | srl    | 0       |
+|     + AxiStream2MatStream_2_s                                   | 3   |        |                         |      |        |         |
+|       mul_32s_32s_32_2_1_U37                                    | 3   |        | bound                   | mul  | auto   | 1       |
+|       sub_fu_88_p2                                              | -   |        | sub                     | add  | fabric | 0       |
+|       sub5_fu_94_p2                                             | -   |        | sub5                    | sub  | fabric | 0       |
+|       sub44_fu_101_p2                                           | -   |        | sub44                   | add  | fabric | 0       |
+|       add_ln1033_fu_108_p2                                      | -   |        | add_ln1033              | add  | fabric | 0       |
+|      + AxiStream2MatStream_2_Pipeline_MMIterInLoopRow           | 0   |        |                         |      |        |         |
+|        add_ln1013_fu_209_p2                                     | -   |        | add_ln1013              | add  | fabric | 0       |
+|        sub_ln1033_fu_291_p2                                     | -   |        | sub_ln1033              | sub  | fabric | 0       |
+|        sub_ln1033_1_fu_297_p2                                   | -   |        | sub_ln1033_1            | sub  | fabric | 0       |
+|        sub_ln628_2_fu_464_p2                                    | -   |        | sub_ln628_2             | sub  | fabric | 0       |
+|        sub_ln628_3_fu_473_p2                                    | -   |        | sub_ln628_3             | sub  | fabric | 0       |
+|        rem_3_fu_317_p2                                          | -   |        | rem_3                   | sub  | fabric | 0       |
+|        sub_ln628_fu_342_p2                                      | -   |        | sub_ln628               | sub  | fabric | 0       |
+|        sub_ln368_fu_348_p2                                      | -   |        | sub_ln368               | sub  | fabric | 0       |
+|        add_ln1030_fu_354_p2                                     | -   |        | add_ln1030              | add  | fabric | 0       |
+|        sub_ln628_1_fu_372_p2                                    | -   |        | sub_ln628_1             | sub  | fabric | 0       |
+|        rem_2_fu_440_p2                                          | -   |        | rem_2                   | add  | fabric | 0       |
+|        add_ln1045_fu_232_p2                                     | -   |        | add_ln1045              | add  | fabric | 0       |
+|  + histoframe_0_9_720_2560_720_1280_1_2_2_s                     | 3   |        |                         |      |        |         |
+|    mul_32ns_32ns_64_2_1_U73                                     | 3   |        | bound                   | mul  | auto   | 1       |
+|   + histoframe_Pipeline_VITIS_LOOP_26_1_VITIS_LOOP_28_2         | 0   |        |                         |      |        |         |
+|     add_ln26_fu_131_p2                                          | -   |        | add_ln26                | add  | fabric | 0       |
+|     e_3_fu_176_p2                                               | -   |        | e_3                     | add  | fabric | 0       |
+|     j_3_fu_149_p2                                               | -   |        | j_3                     | add  | fabric | 0       |
+|  + xfMat2Array_128_9_720_1280_1_1_s                             | 2   |        |                         |      |        |         |
+|   + Mat2Axi                                                     | 2   |        |                         |      |        |         |
+|     p_channel_U                                                 | -   |        | p_channel               | fifo | srl    | 0       |
+|     axibound_V_U                                                | -   |        | axibound_V              | fifo | srl    | 0       |
+|    + addrbound                                                  | 1   |        |                         |      |        |         |
+|      mul_mul_16ns_16ns_26_4_1_U81                               | 1   |        | mul_ln1494              | mul  | dsp48  | 3       |
+|    + Mat2AxiStream                                              | 1   |        |                         |      |        |         |
+|      last_blk_width_channel_U                                   | -   |        | last_blk_width_channel  | fifo | srl    | 0       |
+|     + MatStream2AxiStream_2_s                                   | 1   |        |                         |      |        |         |
+|       op2_assign_fu_106_p2                                      | -   |        | op2_assign              | add  | fabric | 0       |
+|       mul_mul_16ns_16ns_32_4_1_U101                             | 1   |        | bound                   | mul  | dsp48  | 3       |
+|      + MatStream2AxiStream_2_Pipeline_MMIterOutRow_MMIterOutCol | 0   |        |                         |      |        |         |
+|        add_ln1027_fu_207_p2                                     | -   |        | add_ln1027              | add  | fabric | 0       |
+|        sub_ln1277_fu_276_p2                                     | -   |        | sub_ln1277              | sub  | fabric | 0       |
+|        ret_V_1_fu_292_p2                                        | -   |        | ret_V_1                 | sub  | fabric | 0       |
+|        sub_ln553_fu_355_p2                                      | -   |        | sub_ln553               | sub  | fabric | 0       |
+|        filled_next_fu_311_p2                                    | -   |        | filled_next             | add  | fabric | 0       |
+|        add_ln840_fu_247_p2                                      | -   |        | add_ln840               | add  | fabric | 0       |
+|    + AxiStream2Axi                                              | 0   |        |                         |      |        |         |
+|     + AxiStream2Axi_Pipeline_MMIterOutLoop2                     | 0   |        |                         |      |        |         |
+|       add_ln840_fu_108_p2                                       | -   |        | add_ln840               | add  | fabric | 0       |
++-----------------------------------------------------------------+-----+--------+-------------------------+------+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------------------------+------+------+--------+---------------+---------+------+---------+
+| Name                                | BRAM | URAM | Pragma | Variable      | Storage | Impl | Latency |
++-------------------------------------+------+------+--------+---------------+---------+------+---------+
+| + histoframe_accel                  | 0    | 0    |        |               |         |      |         |
+|   in_mat_cols_c_U                   | -    | -    |        | in_mat_cols_c | fifo    | srl  | 0       |
+|   in_mat_rows_c_U                   | -    | -    |        | in_mat_rows_c | fifo    | srl  | 0       |
+|   dat_out_c_U                       | -    | -    |        | dat_out_c     | fifo    | srl  | 0       |
+|   in_mat_data_U                     | -    | -    |        | in_mat_data   | fifo    | srl  | 0       |
+|   out_mat_data_U                    | -    | -    |        | out_mat_data  | fifo    | srl  | 0       |
+|  + Array2xfMat_128_0_720_2560_1_s   | 0    | 0    |        |               |         |      |         |
+|   + Axi2Mat                         | 0    | 0    |        |               |         |      |         |
+|     cols_c_U                        | -    | -    |        | cols_c        | fifo    | srl  | 0       |
+|     rows_c_U                        | -    | -    |        | rows_c        | fifo    | srl  | 0       |
+|     ldata_U                         | -    | -    |        | ldata         | fifo    | srl  | 0       |
+|    + AxiStream2Mat                  | 0    | 0    |        |               |         |      |         |
+|      cols_c_U                       | -    | -    |        | cols_c        | fifo    | srl  | 0       |
+|      rows_c_U                       | -    | -    |        | rows_c        | fifo    | srl  | 0       |
+|  + xfMat2Array_128_9_720_1280_1_1_s | 0    | 0    |        |               |         |      |         |
+|   + Mat2Axi                         | 0    | 0    |        |               |         |      |         |
+|     dout_c_U                        | -    | -    |        | dout_c        | fifo    | srl  | 0       |
+|     ldata_U                         | -    | -    |        | ldata         | fifo    | srl  | 0       |
+|    + Mat2AxiStream                  | 0    | 0    |        |               |         |      |         |
+|      cols_c_U                       | -    | -    |        | cols_c        | fifo    | srl  | 0       |
+|      rows_c_U                       | -    | -    |        | rows_c        | fifo    | srl  | 0       |
++-------------------------------------+------+------+--------+---------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Pragmas with Warnings
++----------+---------+-----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Type     | Options | Location                                                        | Messages                                                                                                                                                                           |
++----------+---------+-----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| dataflow |         | ../../../../../include/pl/common/xf_structs.hpp:1100 in axi2mat | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
+| dataflow |         | ../../../../../include/pl/common/xf_structs.hpp:1364 in mat2axi | Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region |
++----------+---------+-----------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Valid Pragma Syntax
++-----------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+| Type            | Options                                                           | Location                                                                                  |
++-----------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:245 in scalar<n, t>                       |
+| array_partition | variable=val dim=1 complete                                       | ../../../../../include/pl/common/xf_structs.hpp:246 in scalar<n, t>, val                  |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:252 in scalar<n, t>                       |
+| array_partition | variable=val dim=1 complete                                       | ../../../../../include/pl/common/xf_structs.hpp:253 in scalar<n, t>, val                  |
+| array_partition | variable=val dim=1 complete                                       | ../../../../../include/pl/common/xf_structs.hpp:260 in scalar<n, t>, val                  |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:261 in scalar<n, t>                       |
+| array_partition | variable=val dim=1 complete                                       | ../../../../../include/pl/common/xf_structs.hpp:269 in scalar<n, t>, val                  |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:270 in scalar<n, t>                       |
+| array_partition | variable=val dim=1 complete                                       | ../../../../../include/pl/common/xf_structs.hpp:279 in scalar<n, t>, val                  |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:280 in scalar<n, t>                       |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:305 in operator=                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:309 in operator=                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:318 in operator+                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:323 in operator+                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:333 in operator+                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:338 in operator+                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:348 in operator-                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:353 in operator-                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:363 in operator-                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:368 in operator-                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:378 in operator*                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:383 in operator*                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:393 in operator*                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:398 in operator*                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:408 in operator/                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:413 in operator/                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:423 in operator/                          |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:428 in operator/                          |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:584 in type                               |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:592 in depth                              |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:599 in channels                           |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:607 in init                               |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:654 in mat<t, rows, cols, npc, xfcvdepth> |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:663 in mat<t, rows, cols, npc, xfcvdepth> |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:672 in mat<t, rows, cols, npc, xfcvdepth> |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:681 in mat<t, rows, cols, npc, xfcvdepth> |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:708 in copyto                             |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:742 in copyfrom                           |
+| loop_tripcount  | min=1 max=ADDRBOUND                                               | ../../../../../include/pl/common/xf_structs.hpp:966 in axi2axistream                      |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:967 in axi2axistream                      |
+| loop_tripcount  | min=1 max=ADDRBOUND                                               | ../../../../../include/pl/common/xf_structs.hpp:980 in axi2axistream                      |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:981 in axi2axistream                      |
+| loop_tripcount  | min=1 max=LOOPBOUND                                               | ../../../../../include/pl/common/xf_structs.hpp:1015 in axistream2matstream               |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1016 in axistream2matstream               |
+| loop_tripcount  | min=1 max=LOOPBOUND                                               | ../../../../../include/pl/common/xf_structs.hpp:1059 in matstream2mat                     |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1060 in matstream2mat                     |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1072 in axistream2mat                     |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1085 in axistream2mat                     |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1120 in axi2mat                           |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1132 in axi2mat                           |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1152 in axi2mat                           |
+| loop_tripcount  | min=1 max=LOOPBOUND                                               | ../../../../../include/pl/common/xf_structs.hpp:1226 in mat2matstream                     |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1227 in mat2matstream                     |
+| loop_tripcount  | min=1 max=ROWS                                                    | ../../../../../include/pl/common/xf_structs.hpp:1256 in matstream2axistream               |
+| loop_tripcount  | min=1 max=COLS_BOUND_PER_NPC                                      | ../../../../../include/pl/common/xf_structs.hpp:1261 in matstream2axistream               |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1262 in matstream2axistream               |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1304 in mat2axistream                     |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1317 in mat2axistream                     |
+| loop_tripcount  | min=1 max=ADDRBOUND                                               | ../../../../../include/pl/common/xf_structs.hpp:1334 in axistream2axi                     |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1335 in axistream2axi                     |
+| loop_tripcount  | min=1 max=ADDRBOUND                                               | ../../../../../include/pl/common/xf_structs.hpp:1349 in axistream2axi                     |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1350 in axistream2axi                     |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1391 in mat2axi                           |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1422 in mat2axi                           |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_structs.hpp:1452 in mat2axi                           |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:37 in xfpackpixels                        |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:43 in xfpackpixels                        |
+| inline          | off                                                               | ../../../../../include/pl/common/xf_utility.hpp:55 in xfextractpixels                     |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:64 in xfextractpixels                     |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:87 in xfextractdata                       |
+| inline          |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:107 in xfcopydata                         |
+| loop_tripcount  | min=6 max=6                                                       | ../../../../../include/pl/common/xf_utility.hpp:115 in xfcopydata                         |
+| unroll          |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:116 in xfcopydata                         |
+| loop_tripcount  | min=IN_BH max=IN_BH                                               | ../../../../../include/pl/common/xf_utility.hpp:186 in xfduplicatestream                  |
+| loop_flatten    | off                                                               | ../../../../../include/pl/common/xf_utility.hpp:187 in xfduplicatestream                  |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:191 in xfduplicatestream                  |
+| loop_tripcount  | min=IN_BW max=IN_BW                                               | ../../../../../include/pl/common/xf_utility.hpp:192 in xfduplicatestream                  |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                               | ../../../../../include/pl/common/xf_utility.hpp:217 in array2hlsstrm                      |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:218 in array2hlsstrm                      |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                               | ../../../../../include/pl/common/xf_utility.hpp:253 in hlsstrm2xfmat                      |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:254 in hlsstrm2xfmat                      |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                               | ../../../../../include/pl/common/xf_utility.hpp:332 in axistrm2hlsstrm                    |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:333 in axistrm2hlsstrm                    |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:343 in axistrm2xfmat                      |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                               | ../../../../../include/pl/common/xf_utility.hpp:392 in xfmat2hlsstrm                      |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:393 in xfmat2hlsstrm                      |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                               | ../../../../../include/pl/common/xf_utility.hpp:438 in hlsstrm2array                      |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:439 in hlsstrm2array                      |
+| loop_tripcount  | min=1 max=TRIPCOUNT                                               | ../../../../../include/pl/common/xf_utility.hpp:481 in hlsstrm2axistrm                    |
+| pipeline        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:482 in hlsstrm2axistrm                    |
+| dataflow        |                                                                   | ../../../../../include/pl/common/xf_utility.hpp:493 in xfmat2axistrm                      |
+| loop_tripcount  | min=0 max=2560                                                    | ../../../histoframe_accel.cpp:32 in histoframe                                            |
+| pipeline        | II=1                                                              | ../../../histoframe_accel.cpp:33 in histoframe                                            |
+| interface       | m_axi port=dat_inp offset=slave bundle=gmem1 depth=__XF_DEPTH     | ../../../histoframe_accel.cpp:58 in histoframe_accel, dat_inp                             |
+| interface       | m_axi port=dat_out offset=slave bundle=gmem2 depth=__XF_DEPTH_OUT | ../../../histoframe_accel.cpp:59 in histoframe_accel, dat_out                             |
+| interface       | s_axilite port=rows_in                                            | ../../../histoframe_accel.cpp:60 in histoframe_accel, rows_in                             |
+| interface       | s_axilite port=cols_in                                            | ../../../histoframe_accel.cpp:61 in histoframe_accel, cols_in                             |
+| interface       | s_axilite port=rows_out                                           | ../../../histoframe_accel.cpp:62 in histoframe_accel, rows_out                            |
+| interface       | s_axilite port=cols_out                                           | ../../../histoframe_accel.cpp:63 in histoframe_accel, cols_out                            |
+| interface       | s_axilite port=return                                             | ../../../histoframe_accel.cpp:64 in histoframe_accel, return                              |
+| dataflow        |                                                                   | ../../../histoframe_accel.cpp:74 in histoframe_accel                                      |
++-----------------+-------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+
+

@@ -1,0 +1,31 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/reports/_x.hw.kv260_ppse_custom/histoframe_accel
+	Log files: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/logs/histoframe_accel
+INFO: [v++ 60-1548] Creating build summary session with primary output /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel.xo.compile_summary, at Fri Sep  6 14:00:58 2024
+INFO: [v++ 60-1315] Creating rulecheck session with output '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/reports/_x.hw.kv260_ppse_custom/histoframe_accel/v++_compile_histoframe_accel_guidance.html', at Fri Sep  6 14:00:58 2024
+INFO: [v++ 60-895]   Target platform: /media/abhidan/sata/temp/acceleration_2/kv260_ppse_custom/kv260_ppse_custom.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/media/abhidan/sata/temp/acceleration_2/kv260_ppse_custom/hw/kv260_ppse_hardware_platform.xsa'
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: kv260_ppse_custom
+INFO: [v++ 60-242] Creating kernel: 'histoframe_accel'
+INFO: [v++ 60-1616] Creating a HLS clock using hls.clock option: 300 MHz
+
+===>The following messages were generated while  performing high-level synthesis for kernel: histoframe_accel Log file: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel/histoframe_accel/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'MMIterInLoop1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'MMIterInLoop1'
+INFO: [v++ 204-61] Pipelining loop 'MMIterInLoopRow'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'MMIterInLoopRow'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_26_1_VITIS_LOOP_28_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, loop 'VITIS_LOOP_26_1_VITIS_LOOP_28_2'
+INFO: [v++ 204-61] Pipelining loop 'MMIterOutRow_MMIterOutCol'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'MMIterOutRow_MMIterOutCol'
+INFO: [v++ 204-61] Pipelining loop 'MMIterOutLoop2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'MMIterOutLoop2'
+INFO: [v++ 200-789] **** Estimated Fmax: 351.89 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/reports/_x.hw.kv260_ppse_custom/histoframe_accel/system_estimate_histoframe_accel.xtxt
+INFO: [v++ 60-586] Created _x_temp.hw.kv260_ppse_custom/histoframe_accel.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 34s

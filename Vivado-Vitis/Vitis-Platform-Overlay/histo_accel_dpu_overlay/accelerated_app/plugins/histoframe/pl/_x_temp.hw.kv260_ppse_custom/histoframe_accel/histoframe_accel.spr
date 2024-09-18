@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="histoframe_accel" dir="">
+  <FileSets>
+    <FileSet Name="kernel_histoframe_accel" Type="DesignSrcs">
+      <File Path="/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

@@ -1,0 +1,54 @@
+<stg><name>Mat2Axi_Block_entry24_proc</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="19" op_0_bw="19" op_1_bw="19">
+<![CDATA[
+newFuncRoot:0 %axibound_V_1_read = read i19 @_ssdm_op_Read.ap_auto.volatile.i19P0A, i19 %axibound_V_1
+
+]]></Node>
+<StgValue><ssdm name="axibound_V_1_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0" op_0_bw="19">
+<![CDATA[
+newFuncRoot:1 %ret_ln214 = ret i19 %axibound_V_1_read
+
+]]></Node>
+<StgValue><ssdm name="ret_ln214"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

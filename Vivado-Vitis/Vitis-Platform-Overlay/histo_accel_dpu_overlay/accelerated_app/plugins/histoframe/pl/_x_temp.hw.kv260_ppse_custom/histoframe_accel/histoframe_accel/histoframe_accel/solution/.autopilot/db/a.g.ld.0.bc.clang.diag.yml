@@ -1,0 +1,432 @@
+--- !Passed
+Pass:            reflow-pragma-conflict-handle
+Name:            FunctionPragmaConflictWarn
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 670, Column: 0 }
+Function:        _ZN2xf2cv3MatILi0ELi720ELi2560ELi1ELi2EEC2Eii
+Args:            
+  - String:          'In function '''
+  - Function:        'xf::cv::Mat<0, 720, 2560, 1, 2>::Mat(int, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 670, Column: 0 }
+  - String:          ''', '
+  - String:          'Pragma conflict happens on '''
+  - String:          INLINE
+  - String:          ''' and '
+  - String:          DATAFLOW
+  - String:          ' pragmas: '
+  - String:          Inline into dataflow region may break the canonical form
+...
+--- !Passed
+Pass:            reflow-pragma-conflict-handle
+Name:            FunctionPragmaConflictWarn
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 670, Column: 0 }
+Function:        _ZN2xf2cv3MatILi9ELi720ELi1280ELi1ELi2EEC2Eii
+Args:            
+  - String:          'In function '''
+  - Function:        'xf::cv::Mat<9, 720, 1280, 1, 2>::Mat(int, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 670, Column: 0 }
+  - String:          ''', '
+  - String:          'Pragma conflict happens on '''
+  - String:          INLINE
+  - String:          ''' and '
+  - String:          DATAFLOW
+  - String:          ' pragmas: '
+  - String:          Inline into dataflow region may break the canonical form
+...
+--- !Passed
+Pass:            reflow-pragma-conflict-handle
+Name:            FunctionPragmaConflictWarn
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 605, Column: 0 }
+Function:        _ZN2xf2cv3MatILi9ELi720ELi1280ELi1ELi2EE4initEiib
+Args:            
+  - String:          'In function '''
+  - Function:        'xf::cv::Mat<9, 720, 1280, 1, 2>::init(int, int, bool)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 605, Column: 0 }
+  - String:          ''', '
+  - String:          'Pragma conflict happens on '''
+  - String:          INLINE
+  - String:          ''' and '
+  - String:          DATAFLOW
+  - String:          ' pragmas: '
+  - String:          Inline into dataflow region may break the canonical form
+...
+--- !Passed
+Pass:            reflow-pragma-conflict-handle
+Name:            FunctionPragmaConflictWarn
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 605, Column: 0 }
+Function:        _ZN2xf2cv3MatILi0ELi720ELi2560ELi1ELi2EE4initEiib
+Args:            
+  - String:          'In function '''
+  - Function:        'xf::cv::Mat<0, 720, 2560, 1, 2>::init(int, int, bool)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 605, Column: 0 }
+  - String:          ''', '
+  - String:          'Pragma conflict happens on '''
+  - String:          INLINE
+  - String:          ''' and '
+  - String:          DATAFLOW
+  - String:          ' pragmas: '
+  - String:          Inline into dataflow region may break the canonical form
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 675, Column: 2 }
+Function:        _ZN2xf2cv3MatILi0ELi720ELi2560ELi1ELi2EEC2Eii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Mat<0, 720, 2560, 1, 2>::init(int, int, bool)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 605, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'xf::cv::Mat<0, 720, 2560, 1, 2>::Mat(int, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 670, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 675, Column: 2 }
+Function:        _ZN2xf2cv3MatILi9ELi720ELi1280ELi1ELi2EEC2Eii
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Mat<9, 720, 1280, 1, 2>::init(int, int, bool)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 605, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'xf::cv::Mat<9, 720, 1280, 1, 2>::Mat(int, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 670, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                   Line: 67, Column: 47 }
+Function:        histoframe_accel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Mat<0, 720, 2560, 1, 2>::Mat(int, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 670, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          histoframe_accel
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                   Line: 70, Column: 48 }
+Function:        histoframe_accel
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::Mat<9, 720, 1280, 1, 2>::Mat(int, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 670, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          histoframe_accel
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                       Line: 56, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp, 
+                   Line: 524, Column: 0 }
+Function:        _ZN2xf2cv11Array2xfMatILi128ELi0ELi720ELi2560ELi1EEEvP7ap_uintIXT_EERNS0_3MatIXT0_EXT1_EXT2_EXT3_ELi2EEEi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::MMIterIn<128, 0, 720, 2560, 1, 2>::Array2xfMat(ap_uint<128>*, xf::cv::Mat<0, 720, 2560, 1, 2>&, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 1187, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void xf::cv::Array2xfMat<128, 0, 720, 2560, 1>(ap_uint<128>*, xf::cv::Mat<0, 720, 2560, 1, 2>&, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp, 
+                       Line: 524, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                   Line: 17, Column: 0 }
+Function:        _Z10histoframeILi0ELi9ELi720ELi2560ELi720ELi1280ELi1ELi2ELi2EEvRN2xf2cv3MatIXT_EXT1_EXT2_EXT5_EXT6_EEERNS2_IXT0_EXT3_EXT4_EXT5_EXT7_EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_uint<8> xf::cv::Mat<0, 720, 2560, 1, 2>::read<2, (void*)0>(int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 541, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void histoframe<0, 9, 720, 2560, 720, 1280, 1, 2, 2>(xf::cv::Mat<0, 720, 2560, 1, 2>&, xf::cv::Mat<9, 720, 1280, 1, 2>&)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                   Line: 17, Column: 0 }
+Function:        _Z10histoframeILi0ELi9ELi720ELi2560ELi720ELi1280ELi1ELi2ELi2EEvRN2xf2cv3MatIXT_EXT1_EXT2_EXT5_EXT6_EEERNS2_IXT0_EXT3_EXT4_EXT5_EXT7_EEE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void xf::cv::Mat<9, 720, 1280, 1, 2>::write<2, (void*)0>(int, ap_uint<24>)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 552, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void histoframe<0, 9, 720, 2560, 720, 1280, 1, 2, 2>(xf::cv::Mat<0, 720, 2560, 1, 2>&, xf::cv::Mat<9, 720, 1280, 1, 2>&)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp, 
+                       Line: 17, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp, 
+                   Line: 514, Column: 0 }
+Function:        _ZN2xf2cv11xfMat2ArrayILi128ELi9ELi720ELi1280ELi1ELi1EEEvRNS0_3MatIXT0_EXT1_EXT2_EXT3_ELi2EEEP7ap_uintIXT_EEi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'xf::cv::MMIterOut<128, 9, 720, 1280, 1, 1, 2>::xfMat2Array(xf::cv::Mat<9, 720, 1280, 1, 2>&, ap_uint<128>*, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 1509, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void xf::cv::xfMat2Array<128, 9, 720, 1280, 1, 1>(xf::cv::Mat<9, 720, 1280, 1, 2>&, ap_uint<128>*, int)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp, 
+                       Line: 514, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 1332, Column: 9 }
+Function:        _ZN2xf2cv9MMIterOutILi128ELi9ELi720ELi1280ELi1ELi1ELi2EE13AxiStream2AxiERN3hls6streamI7ap_uintILi128EELi0EEEPS6_RS5_ILi19EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.store.6
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        doutseq
+  - String:          ' '
+  - ArrayName:       dout
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        MMIterOutLoop2
+  - String:          ' '
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1332:9'
+  - String:          ' '
+  - Function:        'xf::cv::MMIterOut<128, 9, 720, 1280, 1, 1, 2>::AxiStream2Axi(hls::stream<ap_uint<128>, 0>&, ap_uint<128>*, ap_uint<19>&)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 1328, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 964, Column: 9 }
+Function:        _ZN2xf2cv8MMIterInILi128ELi0ELi720ELi2560ELi1ELi2EE13Axi2AxiStreamEP7ap_uintILi128EERN3hls6streamIS4_Li0EEERS3_ILi18EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ OldID='
+  - String:          for.inc.load.4
+  - String:          ', '
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        dinseq
+  - String:          ' '
+  - ArrayName:       din
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MMIterInLoop1
+  - String:          ' '
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:964:9'
+  - String:          ' '
+  - Function:        'xf::cv::MMIterIn<128, 0, 720, 2560, 1, 2>::Axi2AxiStream(ap_uint<128>*, hls::stream<ap_uint<128>, 0>&, ap_uint<18>&)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 961, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 1332, Column: 9 }
+Function:        _ZN2xf2cv9MMIterOutILi128ELi9ELi720ELi1280ELi1ELi1ELi2EE13AxiStream2AxiERN3hls6streamI7ap_uintILi128EELi0EEEPS6_RS5_ILi19EE
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        doutseq
+  - String:          ' '
+  - ArrayName:       dout
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        MMIterOutLoop2
+  - String:          ' '
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1332:9'
+  - String:          ' '
+  - Function:        'xf::cv::MMIterOut<128, 9, 720, 1280, 1, 1, 2>::AxiStream2Axi(hls::stream<ap_uint<128>, 0>&, ap_uint<128>*, ap_uint<19>&)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 1328, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            BadAccessLen
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 964, Column: 9 }
+Function:        _ZN2xf2cv8MMIterInILi128ELi0ELi720ELi2560ELi1ELi2EE13Axi2AxiStreamEP7ap_uintILi128EERN3hls6streamIS4_Li0EEERS3_ILi18EE
+Args:            
+  - String:          Sequential access length is not divisible by 2
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        dinseq
+  - String:          ' '
+  - ArrayName:       din
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MMIterInLoop1
+  - String:          ' '
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:964:9'
+  - String:          ' '
+  - Function:        'xf::cv::MMIterIn<128, 0, 720, 2560, 1, 2>::Axi2AxiStream(ap_uint<128>*, hls::stream<ap_uint<128>, 0>&, ap_uint<18>&)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 961, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 964, Column: 9 }
+Function:        _ZN2xf2cv8MMIterInILi128ELi0ELi720ELi2560ELi1ELi2EE13Axi2AxiStreamEP7ap_uintILi128EERN3hls6streamIS4_Li0EEERS3_ILi18EE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        MMIterInLoop1
+  - String:          ' '
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:964:9'
+  - String:          ' '
+  - Function:        'xf::cv::MMIterIn<128, 0, 720, 2560, 1, 2>::Axi2AxiStream(ap_uint<128>*, hls::stream<ap_uint<128>, 0>&, ap_uint<18>&) (.1)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 961, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 964, Column: 9 }
+Function:        _ZN2xf2cv8MMIterInILi128ELi0ELi720ELi2560ELi1ELi2EE13Axi2AxiStreamEP7ap_uintILi128EERN3hls6streamIS4_Li0EEERS3_ILi18EE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        MMIterInLoop1
+  - String:          '''('
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:964:9'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 1332, Column: 9 }
+Function:        _ZN2xf2cv9MMIterOutILi128ELi9ELi720ELi1280ELi1ELi1ELi2EE13AxiStream2AxiERN3hls6streamI7ap_uintILi128EELi0EEEPS6_RS5_ILi19EE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - String:          ' '
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        MMIterOutLoop2
+  - String:          ' '
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1332:9'
+  - String:          ' '
+  - Function:        'xf::cv::MMIterOut<128, 9, 720, 1280, 1, 1, 2>::AxiStream2Axi(hls::stream<ap_uint<128>, 0>&, ap_uint<128>*, ap_uint<19>&) (.1)'
+    DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                       Line: 1328, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp, 
+                   Line: 1332, Column: 9 }
+Function:        _ZN2xf2cv9MMIterOutILi128ELi9ELi720ELi1280ELi1ELi1ELi2EE13AxiStream2AxiERN3hls6streamI7ap_uintILi128EELi0EEEPS6_RS5_ILi19EE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '128'
+  - String:          ' in loop '''
+  - LoopName:        MMIterOutLoop2
+  - String:          '''('
+  - LoopLoc:         '/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1332:9'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

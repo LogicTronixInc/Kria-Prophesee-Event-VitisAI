@@ -1,0 +1,460 @@
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:6:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_config.h:13:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_common.hpp:20:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:27:
+In file included from /media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:42:
+In file included from /media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int.h:12:
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:678:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=and_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:692:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=or_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_int_ref.h:706:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xor_reduce_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:6:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_config.h:13:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_common.hpp:20:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:27:
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:76:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_user_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:80:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_id_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:84:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_dest_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:114:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_strb_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:118:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_user_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:122:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_id_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:126:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_dest_ptr_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:132:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_data_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:136:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_keep_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:140:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=get_last_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:145:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_data_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:149:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_keep_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:153:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=set_last_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:157:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=keep_all_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:163:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:167:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:171:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:176:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:181:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=qdma_axis<WData, 0, 0, 0>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:185:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator=_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:220:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=empty_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:227:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=full_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:235:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:245:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:256:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:266:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:281:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:317:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=empty_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:324:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=full_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:332:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:342:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:353:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:363:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=read_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/2022_2/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_axi_sdata.h:379:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=write_nb_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:6:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_config.h:13:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_common.hpp:20:
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:245:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:246:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=variable=val dim=1 complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:252:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:253:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=variable=val dim=1 complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:260:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=variable=val dim=1 complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:261:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:269:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=variable=val dim=1 complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:270:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:279:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=array_partition_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=variable=val dim=1 complete_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:280:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Scalar<N, T>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:305:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator=_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:309:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator=_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:318:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator+_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:323:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator+_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:333:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator+_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:338:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator+_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:348:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator-_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:353:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator-_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:363:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator-_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:368:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator-_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:378:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator*_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:383:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator*_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:393:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator*_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:398:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator*_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:408:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator/_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:413:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator/_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:423:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator/_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:428:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=operator/_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:517:30: warning: unused parameter 'src' [-Wunused-parameter]
+    void copyData(const Mat& src) {
+                             ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:528:30: warning: unused parameter '_data' [-Wunused-parameter]
+    void assignDataPtr(void* _data) {
+                             ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:541:14: warning: unused parameter 'index' [-Wunused-parameter]
+    read(int index) {
+             ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:552:20: warning: unused parameter 'index' [-Wunused-parameter]
+    void write(int index, typename DataType<T, NPC>::name val) {
+                   ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:584:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=type_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:592:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=depth_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:599:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=channels_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:607:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=init_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:654:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat<T, ROWS, COLS, NPC, XFCVDEPTH>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:663:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat<T, ROWS, COLS, NPC, XFCVDEPTH>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:672:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat<T, ROWS, COLS, NPC, XFCVDEPTH>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:681:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat<T, ROWS, COLS, NPC, XFCVDEPTH>_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:708:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=copyTo_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:742:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=copyFrom_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:785:101: warning: unused parameter 'dst' [-Wunused-parameter]
+inline void Mat<T, ROWS, COLS, NPPC, XFCVDEPTH>::convertTo(Mat<DST_T, ROWS, COLS, NPPC, XFCVDEPTH>& dst,
+                                                                                                    ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:966:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2AxiStream_XLX_SEP_ PragmaOptions=min=1 max=ADDRBOUND_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=ADDRBOUND
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:967:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2AxiStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:980:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2AxiStream_XLX_SEP_ PragmaOptions=min=1 max=ADDRBOUND_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=ADDRBOUND
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:981:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2AxiStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1015:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2MatStream_XLX_SEP_ PragmaOptions=min=1 max=LOOPBOUND_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=LOOPBOUND
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1016:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2MatStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1059:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=MatStream2Mat_XLX_SEP_ PragmaOptions=min=1 max=LOOPBOUND_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=LOOPBOUND
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1060:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=MatStream2Mat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1072:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2Mat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1085:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2Mat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1100:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2Mat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1120:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2Mat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1132:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2Mat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1152:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Axi2Mat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1177:102: warning: unused parameter 'index' [-Wunused-parameter]
+    inline static ap_uint<XF_BITS_PER_CLOCK> read(hls::stream<ap_uint<XF_BITS_PER_CLOCK> >& din, int index) {
+                                                                                                     ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1226:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2MatStream_XLX_SEP_ PragmaOptions=min=1 max=LOOPBOUND_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=LOOPBOUND
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1227:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2MatStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1256:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=MatStream2AxiStream_XLX_SEP_ PragmaOptions=min=1 max=ROWS_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=ROWS
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1261:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=MatStream2AxiStream_XLX_SEP_ PragmaOptions=min=1 max=COLS_BOUND_PER_NPC_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=COLS_BOUND_PER_NPC
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1262:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=MatStream2AxiStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1304:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2AxiStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1317:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2AxiStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1334:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2Axi_XLX_SEP_ PragmaOptions=min=1 max=ADDRBOUND_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=ADDRBOUND
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1335:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2Axi_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1349:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2Axi_XLX_SEP_ PragmaOptions=min=1 max=ADDRBOUND_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=ADDRBOUND
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1350:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=AxiStream2Axi_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1364:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2Axi_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1391:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2Axi_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1422:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2Axi_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1452:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Mat2Axi_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_structs.hpp:1483:34: warning: unused parameter 'index' [-Wunused-parameter]
+                             int index) {
+                                 ^
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:6:
+In file included from /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_config.h:14:
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:37:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfPackPixels_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:43:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfPackPixels_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:55:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfExtractPixels_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS inline off
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:64:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfExtractPixels_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS UNROLL
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:87:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfExtractData_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:107:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfCopyData_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INLINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:115:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfCopyData_XLX_SEP_ PragmaOptions=min=6 max=6_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=6 max=6
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:116:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=unroll_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfCopyData_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS unroll
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:186:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFDuplicateStream_XLX_SEP_ PragmaOptions=min=IN_BH max=IN_BH_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=IN_BH max=IN_BH
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:187:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_flatten_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFDuplicateStream_XLX_SEP_ PragmaOptions=off_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_FLATTEN off
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:191:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFDuplicateStream_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS pipeline
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:192:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xFDuplicateStream_XLX_SEP_ PragmaOptions=min=IN_BW max=IN_BW_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=IN_BW max=IN_BW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:217:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Array2hlsStrm_XLX_SEP_ PragmaOptions=min=1 max=TRIPCOUNT_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=TRIPCOUNT
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:218:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=Array2hlsStrm_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:253:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hlsStrm2xfMat_XLX_SEP_ PragmaOptions=min=1 max=TRIPCOUNT_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=TRIPCOUNT
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:254:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hlsStrm2xfMat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:332:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=axiStrm2hlsStrm_XLX_SEP_ PragmaOptions=min=1 max=TRIPCOUNT_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=TRIPCOUNT
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:333:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=axiStrm2hlsStrm_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:343:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=axiStrm2xfMat_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:392:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfMat2hlsStrm_XLX_SEP_ PragmaOptions=min=1 max=TRIPCOUNT_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=TRIPCOUNT
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:393:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfMat2hlsStrm_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:438:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hlsStrm2Array_XLX_SEP_ PragmaOptions=min=1 max=TRIPCOUNT_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=TRIPCOUNT
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:439:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hlsStrm2Array_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:481:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hlsStrm2axiStrm_XLX_SEP_ PragmaOptions=min=1 max=TRIPCOUNT_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=1 max=TRIPCOUNT
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:482:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=hlsStrm2axiStrm_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/include/pl/common/xf_utility.hpp:493:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=xfMat2axiStrm_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:32:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=loop_tripcount_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_XLX_SEP_ PragmaOptions=min=0 max=2560_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS LOOP_TRIPCOUNT min=0 max=2560
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:33:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS PIPELINE II=1
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel/histoframe_accel/histoframe_accel.tcl:24:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=name=histoframe_accel_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=histoframe_accel
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:58:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=m_axi port=dat_inp offset=slave bundle=gmem1 depth=__XF_DEPTH_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=dat_inp offset=slave bundle=gmem1 depth=__XF_DEPTH
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:59:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=m_axi port=dat_out offset=slave bundle=gmem2 depth=__XF_DEPTH_OUT_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE m_axi port=dat_out offset=slave bundle=gmem2 depth=__XF_DEPTH_OUT
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:60:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=s_axilite port=rows_in_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=rows_in
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:61:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=s_axilite port=cols_in_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=cols_in
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:62:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=s_axilite port=rows_out_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=rows_out
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:63:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=s_axilite port=cols_out_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=cols_out
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:64:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=s_axilite port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return
+        ^
+/media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/histoframe_accel.cpp:74:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=dataflow_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=histoframe_accel_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS DATAFLOW
+        ^
+148 warnings generated.

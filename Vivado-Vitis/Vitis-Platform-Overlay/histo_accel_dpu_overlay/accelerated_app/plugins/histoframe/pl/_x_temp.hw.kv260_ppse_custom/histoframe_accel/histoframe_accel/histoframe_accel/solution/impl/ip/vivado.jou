@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Sep  6 14:01:40 2024
+# Process ID: 285945
+# Current directory: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel/histoframe_accel/histoframe_accel/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel/histoframe_accel/histoframe_accel/solution/impl/ip/vivado.log
+# Journal file: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel/histoframe_accel/histoframe_accel/solution/impl/ip/vivado.jou
+# Running On: abhidan-logictronix, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 16, Host memory: 33567 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

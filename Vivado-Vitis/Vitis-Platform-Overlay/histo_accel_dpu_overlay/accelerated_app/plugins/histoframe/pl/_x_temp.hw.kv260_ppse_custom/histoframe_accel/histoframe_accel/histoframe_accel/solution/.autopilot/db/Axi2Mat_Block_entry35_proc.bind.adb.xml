@@ -1,0 +1,63 @@
+<stg><name>Axi2Mat_Block_entry35_proc</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>FIFO_SRL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="18" op_0_bw="18" op_1_bw="18">
+<![CDATA[
+newFuncRoot:0 %axibound_V_2_read = read i18 @_ssdm_op_Read.ap_auto.volatile.i18P0A, i18 %axibound_V_2
+
+]]></Node>
+<StgValue><ssdm name="axibound_V_2_read"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0" op_0_bw="18">
+<![CDATA[
+newFuncRoot:1 %ret_ln214 = ret i18 %axibound_V_2_read
+
+]]></Node>
+<StgValue><ssdm name="ret_ln214"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="4" name="axibound_V_2" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="axibound_V_2"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="6" from="_ssdm_op_Read.ap_auto.volatile.i18P0A" to="axibound_V_2_read" fromId="5" toId="2">
+</dataflow>
+<dataflow id="7" from="axibound_V_2" to="axibound_V_2_read" fromId="4" toId="2">
+</dataflow>
+<dataflow id="8" from="axibound_V_2_read" to="ret_ln214" fromId="2" toId="3">
+</dataflow>
+</dataflows>
+
+
+</stg>
