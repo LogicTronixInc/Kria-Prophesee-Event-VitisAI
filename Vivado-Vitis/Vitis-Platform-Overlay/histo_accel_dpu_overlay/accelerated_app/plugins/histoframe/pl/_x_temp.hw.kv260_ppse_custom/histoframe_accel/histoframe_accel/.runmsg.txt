@@ -1,2 +1,0 @@
-performing high-level synthesis for kernel: histoframe_accel
-Log file: /media/abhidan/sata/temp/acceleration_2/Vitis-AI-3.0/examples/waa/plugins/histoframe/pl/_x_temp.hw.kv260_ppse_custom/histoframe_accel/histoframe_accel/vitis_hls.log
